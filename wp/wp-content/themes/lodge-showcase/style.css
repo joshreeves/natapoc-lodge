@@ -1,0 +1,550 @@
+/*
+Theme Name: Natapoc Lodge Showcase
+Author: Josh Reeves
+Author URI: http://joshreeves.com/
+Description: A theme inspired by the unique look and feel of Natapoc Lodge in Leavenworth, WA.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: wood, steel, lodge, vacation, cabin, rental, right-sidebar, flexible-width, fluid-layout, responsive-layout, custom-menu, featured-images
+*/
+
+* {margin: 0; padding: 0;}
+ul, li {list-style: none; list-style-type: none;}
+article, aside, details, figcaption,
+figure, footer, header, hgroup, menu, nav, section {
+    display:block;
+}
+
+h2 {
+  display: inline;
+  font-size: 210%;
+  font-weight: normal;
+  line-height: 1em;
+}
+a {text-decoration: underline; color: #d5aa3d;}
+a:hover {color: #ffd74b;}
+a img {border: 0;}
+p {margin: 0 0 1.5em;}
+cite {font-weight: normal; font-style: normal; font-size: 210%; line-height: 0.8em; font-variant: small-caps;}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 370px;
+  background: #eee url("images/bg.png") repeat 0 0;
+}
+
+header {
+  position: relative;
+  text-align: center;
+  z-index: 1000;
+}
+
+header nav {margin-top: 20px; text-align: center;}
+  header nav ul li {
+    display: inline-block;
+    margin: 0 2%;
+    zoom:1;
+    *display: inline;
+    _height: 52px;
+  }
+  header nav ul li a {
+    display: block;
+    margin: 0 0 20px;
+    height: 52px;
+    background: transparent url("images/nav.png") no-repeat 0 100%;
+    text-indent: -5000px;
+  }
+
+  header nav ul li a[href$='.localdev/'],
+  header nav ul li a[href$='.com/'],
+  header nav ul li a[href$='.com'] {width: 41px; background-position: 0 0;}
+  header nav ul li a[href$='accommodations/'] {width: 133px; background-position: -51px 0;}
+  header nav ul li a[href$='activities/'] {width: 81px; background-position: -194px 0;}
+  header nav ul li a[href$='reservations/'] {width: 108px; background-position: -285px 0;}
+  header nav ul li a[href$='photos/'] {width: 58px; background-position: -403px 0;}
+  header nav ul li#moreInfoLink a {width: 79px; background-position: -471px 0;}
+
+  header nav ul li a[href$='.localdev/']:hover,
+  header nav ul li a[href$='.com/']:hover,
+  header nav ul li a[href$='.com']:hover,
+  header nav ul li.current-menu-item a[href$='.localdev/'],
+  header nav ul li.current-menu-item a[href$='.com/'],
+  header nav ul li.current-menu-item a[href$='.com'] {background-position: 0 bottom;}
+  header nav ul li a[href$='accommodations/']:hover,
+  header nav ul li.current-menu-item a[href$='accommodations/'] {background-position: -51px bottom;}
+  header nav ul li a[href$='activities/']:hover,
+  header nav ul li.current-menu-item a[href$='activities/'] {background-position: -194px bottom;}
+  header nav ul li a[href$='reservations/']:hover,
+  header nav ul li.current-menu-item a[href$='reservations/'] {background-position: -285px bottom;}
+  header nav ul li a[href$='photos/']:hover,
+  header nav ul li.current-menu-item a[href$='photos/'] {background-position: -403px bottom;}
+  header nav ul li#moreInfoLink a:hover,
+  header nav ul li#moreInfoLink.current-menu-item a {background-position: -471px bottom;}
+
+  header nav #logo {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -90px;
+    margin-left: -89px;
+    width: 181px;
+    height: 84px;
+    z-index: 1000;
+  }
+  body.smallscreen header nav #logo {position: static; margin: 0 auto 0;}
+  header nav #logo span {
+    display: block;
+    height: 43px;
+    background: url("images/logo-new.png") no-repeat 0 100%;
+    text-indent: -5000px;
+  }
+
+  p#referrals #referralsDiv {display: none;}
+
+
+div#container {
+  background: url("images/bg-container.png") repeat-y 50% 0;
+}
+div#containerI {
+  background: url("images/frame-wings.jpg") no-repeat 50% 0;
+}
+div#containerII {
+  max-width: 958px;
+  margin: 0 auto;
+}
+
+section#monitor {
+  position: relative;
+  width: 100%;
+  height: 329px;
+}
+  section#monitor #monitorPhotos {
+    position: relative;
+    width: 100%;
+    height: 274px;
+    padding: 55px 0 0 0;
+    overflow: hidden;
+  }
+  section#monitor #monitorPhotos div.slider-wrapper {
+    position: absolute;
+    top: 55px;
+    right: 50%;
+    width: 850px;
+    height: 219px;
+    z-index: 1;
+    margin-right: -425px;
+  }
+  section#monitor #monitorI {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 329px;
+    width: 100%;
+    background: url("images/frame-bg.png") no-repeat top right;
+    z-index: 2;
+  }
+  section#monitor #monitorII {
+    height: 329px;
+    background: url("images/frame-slide.png") no-repeat 0 0;
+  }
+
+section#content {
+  margin: 0;
+  background: transparent url("images/frame.jpg") repeat-y 0 0;
+  font-family: "Lucida Grande", "Trebuchet MS", sans-serif;
+  font-family: Georgia, serif;
+  color: #e8e8e8;
+}
+section#content #contentI {
+  padding: 0 55px;
+  background: transparent url("images/frame.jpg") repeat-y top right;
+}
+section#content #contentII {
+
+}
+
+div.rowA {
+background: #592513 url("images/tear-gray-red.png") no-repeat 0 0;
+}
+div.rowA:first-child {
+  padding-top: 10px;
+  background-image: url("images/tear-texturedgray.png");
+}
+div.rowA .rowI {
+margin: 0;
+padding: 40px 4% 1px;
+
+overflow: hidden;
+text-align: left;
+font-family: "Lucida Grande", "Trebuchet MS", sans-serif;
+font-family: Georgia, serif;
+letter-spacing: 1px;
+font-weight: normal;
+font-variant: normal;
+font-size: 19px;
+line-height: 1.5em;
+color: #ac7562;
+overflow: hidden;
+}
+div.rowA p {
+  margin: 0 0 1em;
+}
+div.rowA p:last-child {
+  margin-bottom: 0.8em;
+}
+
+#calendarWrap {
+width: 240px;
+float: right;
+padding: 0;
+margin: 0 0 1em 4%;
+font-size: 10px;
+line-height: 10px;
+font-family: "Lucida Grande", "Trebuchet MS", sans-serif;
+color: #fff;
+}
+#calendarWrap.reservations {
+  width: 240px;
+}
+#calendar {
+  width: 240px;
+  margin: 0 0 1em;
+}
+  #calendarWrap.reservations #calendar {
+    width: 100%;
+  }
+#calendarWrap #legend div {
+  border-left: 10px solid #7F341C;
+  margin: 0 0 4px 3px;
+  padding-left: 7px;
+}
+#calendarWrap #legend div.unavailable {border-color: #f00;}
+#calendarWrap #legend div.today {border-color: #fff;}
+
+#calendar .fc-widget-content {
+  border: 2px solid #592513;
+  background: #7F341C;
+}
+#calendar .fc-header h2 {
+    font-size: 10px;
+    white-space: normal !important;
+}
+#calendar .fc-widget-header {
+  border: 0px;
+}
+#calendar .fc-state-highlight { /* <td> today cell */ /* TODO: add .fc-today to <th> */
+  background: #fff;
+  color: #000;
+  }
+.fc-view-month .fc-event, .fc-view-agendaWeek .fc-event {
+    font-size: 0;
+    overflow: hidden;
+    height: 7px;
+}
+.fc-view-agendaWeek .fc-event-vert {
+    font-size: 0;
+    overflow: hidden;
+    width: 2px !important;
+}
+.fc-agenda-axis {
+    width: 20px !important;
+    font-size: .7em;
+}
+
+.fc-button-content {
+    padding: 0;
+}
+
+.rowB {
+background: #a8a8a8 url("images/bg-content.png") repeat 0 0;
+}
+.rowB .rowI {
+padding: 55px 4% 1px;
+background: transparent url("images/tear-red-gray.png") no-repeat 0 0;
+font-size: 19px;
+line-height: 1.5em;
+color: #e8e8e8;
+overflow: hidden;
+}
+.rowB .rowI a {color: #fff; text-decoration: underline;}
+.rowB .rowI a:hover {color: #592513;}
+
+footer {
+max-width: 958px;
+margin: 0 auto;
+background: #111 url("images/bg-footer.png") repeat-y top right;
+}
+
+footer #footerI {
+padding: 7px 55px 3px;
+background: transparent url("images/bg-footer.png") repeat-y -945px 0;
+margin: 0;
+font-size: 10px;
+font-family: Georgia, "Arial Black", Gadget, sans-serif;
+color: #fff;
+}
+
+footer address {
+margin: 0.5em 0;
+font-style: normal;
+}
+footer address em {font-style: normal;}
+footer address span.container {
+display: inline-block;
+padding: 0 4% 7px;
+}
+footer address span.phone {text-align: center;}
+
+footer #legal {
+padding: 0 4%;
+margin: 0 0 1.5em;
+}
+footer #legal p {
+margin-bottom: 0.5em;
+}
+
+#features {
+float: right;
+width: 240px;
+font-size: 12px;
+line-height: normal;
+color: #592513;
+margin: 0 0 3em 3em;
+}
+#features h2 {
+display: block;
+margin: 0 0 0.5em;
+color: #592513;
+font-size: 18px;
+font-style: italic;
+}
+#features h3 {
+margin: 0 0 0.2em;
+font-size: 10px;
+text-transform: uppercase;
+color: #7f341c;
+font-family: "Lucida Grande", "Trebuchet MS", sans-serif;
+}
+#features p {
+margin: 0 0 1em;
+}
+#features li {
+margin-left: 10px;
+list-style-type: disc;
+}
+#features ul {
+margin: 0 0 1em 10px;
+}
+#features a {
+color: #7f341c;
+}
+#features .photo {
+margin: 0 0 1em;
+}
+
+div.photo {
+margin: 0;
+margin: 0 0 0 4%;
+position: relative;
+max-width: 320px;
+float: right;
+}
+.rowB div.photo {
+  float: left;
+  margin: 0 4% 0 0;
+}
+div.photo img {
+width: 100%;
+}
+div.photo img.frame {
+position: absolute;
+top: 0;
+left: 0;
+}
+div.photo div.gallery {
+display: none;
+}
+
+#ratesWrap {
+padding: 1em 0 0;
+clear: both;
+}
+
+#rates {
+margin: 0 0 5px;
+padding: 1em;
+color: #ac7562;
+background: #75341c;
+-moz-box-shadow: 0 0 15px #222;
+-webkit-box-shadow: 0 0 15px #222;
+box-shadow: 0 0 15px #222;
+/* For IE 8 */
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#222222')";
+/* For IE 5.5 - 7 */
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#222222');
+-moz-border-radius: 8px;
+border-radius: 8px;
+}
+#ratesWrap h3 {
+margin: 0 12px 0.3em;
+}
+#rates table {
+width: 100%;
+font-family: "Lucida Grande", "Arial", sans-serif;
+border-collapse: collapse;
+}
+#rates tr.odd {
+background: #ac7562;
+color: #3F1A0E;
+}
+#rates tr.even {
+color: #D39179;
+}
+#rates th, #rates td {
+text-align: left;
+vertical-align: middle;
+padding: 10px;
+font-size: 12px;
+line-height: 1.2em;
+}
+#rates th:first-child {
+
+}
+#rates ul, #rates li {
+margin: 0;
+padding: 0;
+font-size: 10px;
+line-height: normal;
+list-style-type: disc;
+}
+#rates ul {
+margin: 0 0 10px 30px;
+}
+#ratesWrap .info {
+margin: 12px;
+font-size: 11px;
+line-height: 20px;
+}
+
+/* Photos Page */
+body#photos .rowI {
+text-align: center;
+}
+body#photos div.photo {
+float: none;
+display: inline-block;
+margin: 0 0.5%;
+}
+
+/* NEW: Thumb */
+.thumbnail {
+  float: left;
+  margin: 0 2em 3em 0;
+  text-decoration: none;
+}
+.thumbnail.alt {
+  float: right;
+  margin: 0 0 2em 3em;
+}
+.thumbnail figure {
+  display: inline-block;
+  position: relative;
+  padding: 30px;
+  margin: 0;
+  box-sizing: border-box;
+}
+.thumbnail figcaption {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: flex-end;
+  -webkit-align-items: flex-end;
+  -moz-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: center;
+  -ms-flex-pack: justify;
+  -moz-box-pack: justify;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 0.75em;
+  box-sizing: border-box;
+  z-index: 1;
+  text-align: center;
+  color: rgba(255,255,255,0.4);
+  font-family: "Lucida Grande", "Trebuchet MS", sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.thumbnail figure::before,
+.thumbnail figure::after,
+.thumbnail figcaption::before,
+.thumbnail figcaption::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60%;
+  height: 50.1%;
+  background: transparent url('images/picture-frame-piece.png') no-repeat 0 0;
+  background-size: 900px 600px;
+  mask-image: linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%);
+  -webkit-mask-image: linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%);
+}
+.thumbnail figure::before {
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.thumbnail figure::after {
+  top: 0;
+  right: 0;
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.thumbnail figcaption::before {
+  bottom: 0;
+  left: 0;
+  -webkit-transform: scaleY(-1);
+  -ms-transform: scaleY(-1);
+  transform: scaleY(-1);
+  z-index: -1;
+}
+.thumbnail figcaption::after {
+  bottom: 0;
+  right: 0;
+  -webkit-transform: scaleX(-1) scaleY(-1);
+  -ms-transform: scaleX(-1) scaleY(-1);
+  transform: scaleX(-1) scaleY(-1);
+  z-index: -1;
+}
+.thumbnail figure img {
+  vertical-align: bottom;
+  position: relative;
+  box-shadow: 0px 15px 10px 20px rgba(0,0,0,0.50);
+  width: 240px;
+  height: auto;
+}
+
+.gallery {
+  display: none;
+}
+body#photos .thumbnail {
+  display: inline-block;
+  float: none;
+  margin: 0 1em 2em;
+}
+
+body#photos .thumbnail figure img {
+  width: 240px;
+  height: 170px;
+  text-align: center;
+}

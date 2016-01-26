@@ -14,6 +14,7 @@ sitemap.xml.gz
 **/wp-content/uploads/
 **/wp-content/wp-cache-config.php
 **/wp-content/plugins/hello.php
+**/wp-content/plugins/wordpress-importer/
 
 **/readme.html
 **/license.txt

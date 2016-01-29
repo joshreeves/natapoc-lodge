@@ -7,21 +7,9 @@
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<section id="monitor">
-	<div id="monitorPhotos">
-    <div class="slider-wrapper theme-default">
-      <div id="slider" class="nivoSlider">
-				<?php if ( $slideshow_images = get_field( 'slideshow_images' ) ): foreach( $slideshow_images as $image ): ?>
-					<?php echo wp_get_attachment_image( $image->ID, 'full' ); ?>
-				<?php endforeach; endif; ?>
-      </div>
-    </div>
-	</div>
-	<div id="monitorI">
-		<div id="monitorII">
-		</div>
-	</div>
-</section>
+
+<?php include(locate_template('partials/slideshow.php')); ?>
+
 <section id="content">
 	<div id="contentI">
 		<div class="rowA">
@@ -31,7 +19,7 @@
 		</div>
 
 		<?php if ( $amenities = get_field( 'amenities' ) ): foreach( $amenities as $photos_container_index => $post ): setup_postdata($post); ?>
-			<div class="row<?php echo($photos_index % 2 == 0 ? 'B' : 'A'); ?>">
+			<div class="row<?php echo($photos_container_index % 2 == 0 ? 'B' : 'A'); ?>">
 				<div class="rowI">
 					<?php $photos = get_field( 'photos' ); ?>
 					<?php $is_gallery_mode = false; include(locate_template('partials/photos.php')); ?>

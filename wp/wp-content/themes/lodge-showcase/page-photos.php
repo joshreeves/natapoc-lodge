@@ -1,6 +1,6 @@
 <?php
 /*
-  Template Name: Amenities List
+  Template Name: Photos
 */
 ?>
 
@@ -22,24 +22,20 @@
 		</div>
 	</div>
 </section>
-<section id="content">
+<section id="content" class="photos">
 	<div id="contentI">
-		<div class="rowA">
-			<div class="rowI">
-				<?php the_field( 'introduction' ); ?>
-			</div>
-		</div>
+		<?php
+			$photos = get_field( 'photos' );
+			$photos_chunked = array_chunk($photos, 4);
+		?>
 
-		<?php if ( $amenities = get_field( 'amenities' ) ): foreach( $amenities as $photos_container_index => $post ): setup_postdata($post); ?>
-			<div class="row<?php echo($photos_index % 2 == 0 ? 'B' : 'A'); ?>">
+		<?php if ( $photos ): foreach( $photos_chunked as $photos_container_index => $photos ): ?>
+			<div class="row<?php echo($photos_container_index % 2 == 0 ? 'A' : 'B'); ?>">
 				<div class="rowI">
-					<?php $photos = get_field( 'photos' ); ?>
-					<?php $is_gallery_mode = false; include(locate_template('partials/photos.php')); ?>
-					<h2><?php the_title(); ?></h2>
-					<?php the_field( 'description' ); ?>
+					<?php $is_gallery_mode = true; include(locate_template('partials/photos.php')); ?>
 				</div>
 			</div>
-		<?php endforeach; wp_reset_postdata(); endif; ?>
+		<?php endforeach; endif; ?>
 	</div>
 </section>
 

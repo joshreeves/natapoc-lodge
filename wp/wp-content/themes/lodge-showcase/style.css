@@ -428,16 +428,6 @@ font-size: 11px;
 line-height: 20px;
 }
 
-/* Photos Page */
-body#photos .rowI {
-text-align: center;
-}
-body#photos div.photo {
-float: none;
-display: inline-block;
-margin: 0 0.5%;
-}
-
 /* NEW: Thumb */
 .thumbnail {
   float: left;
@@ -537,13 +527,25 @@ margin: 0 0.5%;
 .gallery {
   display: none;
 }
-body#photos .thumbnail {
+
+/* Photos Page */
+#content.photos .rowI {
+  text-align: center;
+}
+
+#content.photos div.photo {
+  float: none;
+  display: inline-block;
+  margin: 0 0.5%;
+}
+
+#content.photos .thumbnail {
   display: inline-block;
   float: none;
   margin: 0 1em 2em;
 }
 
-body#photos .thumbnail figure img {
+#content.photos .thumbnail figure img {
   width: 240px;
   height: 170px;
   text-align: center;

@@ -550,3 +550,22 @@ line-height: 20px;
   height: 170px;
   text-align: center;
 }
+
+/* Seasons */
+.seasons {
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: middle;
+  line-height: 25px;
+  margin-bottom: 10px;
+}
+.season, .season img {
+  display: inline-block;
+  vertical-align: middle;
+}
+.season {
+  opacity: 0.3;
+}
+.season--valid {
+  opacity: 1;
+}

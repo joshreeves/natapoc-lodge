@@ -30,7 +30,8 @@ const SEASONS_FIELD_KEY = 'field_56ad2f674ad4d';
 						<?php the_title(); ?><br>
 						<?php if (has_category( 'activities', $post )): ?>
 							<?php
-								$season_options = get_field_object(SEASONS_FIELD_KEY)['choices'];
+								$season_options = get_field_object(SEASONS_FIELD_KEY);
+								$season_options = $season_options['choices'];
 								$seasons = get_field( 'seasons' );
 							?>
 							<span class="seasons">

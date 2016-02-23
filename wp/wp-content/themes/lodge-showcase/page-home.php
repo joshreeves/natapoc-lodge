@@ -69,10 +69,10 @@
 
         <aside id="features" style="width: 184px;">
 
-          <div class="photo">
+          <!-- <div class="photo">
             <img src="<?php echo get_template_directory_uri(); ?>/images/live_thumb.jpg" />
             <a href="/livephoto.php.jpg" class="thumbnail" rel="photos" style="margin-bottom: 0"><img src="<?php echo get_template_directory_uri(); ?>/images/picture-frame.png" class="frame" /></a>
-          </div>
+          </div> -->
 
           <div style="text-align: center; margin-bottom: 1.25em">
             <div style="display:inline-block;"><a href="http://www.vrbo.com/411334" rel="nofollow"><img src="http://www.vrbo.com/haow/api/image/vrbo/vrbo/411334/reviews" alt="HomeAway Property" style="border:none;" rel="nofollow"/></a><div style="text-align:center;"><a href="http://www.vrbo.com/411334/reviews" rel="nofollow">Read</a> or <a href="http://www.vrbo.com/411334/reviews/write" rel="nofollow">Write</a> Reviews</div></div>

@@ -569,3 +569,44 @@ line-height: 20px;
 .season--valid {
   opacity: 1;
 }
+
+/* Document */
+.page-template-page-document,
+.page-template-page-document body {
+  width: 100%;
+  height: 100%;
+  font-family: "Lucida Grande", "Trebuchet MS", sans-serif;
+  font-family: Georgia, serif;
+}
+.page-template-page-document body {
+  background: #fff url('images/NatapocTemplate.png') no-repeat 50% 0;
+  background-size: contain;
+}
+
+.page-template-page-document .document {
+  width: 60vh;
+  max-width: 73vw;
+  margin: 0 auto;
+  padding-top: 12.5vh;
+  font-size: 1.8vh;
+}
+
+.page-template-page-document h1 {
+  font-size: 4vh;
+  margin: 0 0 2.5vh;
+}
+
+.page-template-page-document p {
+  margin: 0 0 2.5vh;
+}
+
+.page-template-page-document ul {
+
+}
+
+.page-template-page-document li {
+  margin: 0 0 2vh 0.6vh;
+  padding: 0 0 0 3.3vh;
+  background: #fff url('images/icons/elk.png') no-repeat 0 0;
+  background-size: 2vh 2vh;
+}

@@ -38,7 +38,7 @@
     			<?php echo get_field( 'body' ); ?>
     		</div>
 
-				<!-- OwnerRez Booking/Inquiry widget for Natapoc Lodge -->
+				<!-- OwnerRez Booking/Inquiry widget for Natapoc Lodge  -->
 				<div class="ownerrez-widget" data-widgetId="2d144d1be26a46f086014087cce5194c" data-propertyId="c0013024c66049e183caccf5152933ad"></div>
 				<script type="text/javascript" src="https://secure.ownerreservations.com/widget.js"></script>
 
